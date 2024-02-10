@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <!-- mektub -->
+    <!-- convert -->
+    <form > 
+
+        <label for="name">Card Number*</label> <br>
+        <input 
+        maxlength="5"
+        required
+            placeholder="ex. 07000553"
+            id="name" 
+            name="name"
+            type="text"
+        > <br>
+        
+
+        <label for="amount">Amount</label> <br>
+        <input id="amount" type="number"> <br>
+
+        <label for="date">Date</label> <br>
+        <input id="date" type="date"> <br>
+
+        <label for="file">File</label> <br>
+        <input id="file" multiple accept="image/png, image/gif, image/jpeg" type="file"> <br>
+
+        <label for="password">Password</label> <br>
+        <input disabled value="Test123@" id="password" type="password"> <br>
+
+        <label for="email">Email</label> <br>
+        <input value="test@gmail.com" id="email" type="email"> <br>
+
+        <label for="color">Color</label> <br>
+        <input id="color" type="color"> <br>
+
+        <label for="checkbox">Qaydalarla razisan mi?</label> 
+        <input id="checkbox" checked type="checkbox"> <br>
+
+        <span>asdasdf: </span>
+        <input id="gender" name="gender" value="Male" type="radio"> <br>
+        <span>Female</span>
+        <input id="gender" name="gender" value="Female" type="radio"> <br>
+
+            <select id="marka" name="marka" >
+                <option value="">Marka</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Russia">Russia</option>
+                <option value="USA">USA</option>
+            </select>
+
+        <textarea name="message" id="message" cols="30" rows="10"></textarea> -->
+
+
+          <input list="browsers">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+
+    </form>
+    
+</body>
+</html>
