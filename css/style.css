@@ -1,0 +1,28 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  color: red;
+}
+.navigation__list-item {
+  text-align: center;
+}
+.navigation__list-item-link {
+  text-decoration: none;
+  color: rgb(126, 13, 0);
+  text-transform: uppercase;
+  text-shadow: 5px 5px 4px;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  text-indent: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+}/*# sourceMappingURL=style.css.map */

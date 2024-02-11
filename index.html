@@ -3,6 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- google fonts end -->
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navigation {
+    color: red;
+
+    &__list {
+
+
+        &-item {
+            text-align: center;
+
+            &-link {
+                text-decoration: none;
+                color: rgb(126, 13, 0);
+                text-transform: uppercase;
+                text-shadow: 5px 5px 4px;
+                letter-spacing: 2px;
+                word-spacing: 10px;
+                text-indent: 10px;
+                font-size: 20px;
+                font-weight: 400;
+                font-style: italic;
+                  }
+              }
+          }
+
+      }
+
+    </style>
+
     <title>Document</title>
   </head>
   <body>
@@ -11,13 +60,13 @@
         <img src="" alt="test" />
       </div>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="">Men</a>
+      <nav class="navigation" >
+        <ul class="navigation__list" >
+          <li class="navigation__list-item" >
+            <a class="navigation__list-item-link" href="test">Men</a>
           </li>
-          <li>
-            <a href="">Women</a>
+          <li class="navigation__list-item" >
+            <a class="navigation__list-item-link" href="">Women</a>
           </li>
         </ul>
       </nav>
@@ -229,3 +278,5 @@
     </main>
   </body>
 </html>
+
+<!-- inline, internal, external -->

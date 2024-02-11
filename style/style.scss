@@ -1,0 +1,50 @@
+// a {
+//     text-decoration: none; 
+//     text-transform: uppercase; 
+//     color: rgba(126, 13, 0, 0.051)
+// }
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navigation {
+    color: red;
+
+    &__list {
+
+
+        &-item {
+            text-align: center;
+
+            &-link {
+                text-decoration: none;
+                color: rgb(126, 13, 0);
+                text-transform: uppercase;
+                text-shadow: 5px 5px 4px;
+                letter-spacing: 2px;
+                word-spacing: 10px;
+                text-indent: 10px;
+                font-size: 20px;
+                font-weight: 400;
+                font-style: italic;
+                // font: 20px/30px 'Poppins', sans-serif;
+            }
+        }
+    }
+
+}
+
+// a[href^="test"] {
+//     color: red;
+// }
+
+// img, video {
+//     height: auto;
+// }
