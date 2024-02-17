@@ -13,12 +13,114 @@ body {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    // box-sizing: border-box;
+}
+
+.card {
+    width: 100%;
+    // min-height: 500px;
+    // background-color: red;
+    padding: 20px 5px;
+    &__top {
+        width: 100%;
+        position: relative;
+
+         &::before {
+                content: '🥶';
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background-color: #fff;
+                border-radius: 50%;
+                z-index: 999;
+                padding: 5px 10px;
+            }
+        &-img {
+            width: 100%;
+            height: 450px;
+            border-radius: 12px;
+            object-fit: cover;
+
+           
+        }
+
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+
+        &-description{
+            opacity: .7;
+        }
+
+        &-price {
+
+            &::before {
+                // content: url('../assets/alert-tringle.svg');
+                // width: 20px;
+                // height: 20px;
+                content: '🔥';
+            }
+        }
+
+    }
+}
+
+#products {
+    display: flex;
+
+    .products {
+
+        &__img1 {
+            width: 40%; 
+            height: 400px;
+            background-color: red;
+            position: relative;
+
+            .btn {
+                // width: 100px;
+                padding: 10px 30px;
+                background-color: bisque;
+                border: none;
+                border-radius: 14px;
+                text-align: center;
+                cursor: pointer;
+                position: absolute;
+                top: -3%;
+                left: 40%;
+            }
+        }
+
+        &__img2 {
+            width: 30%; 
+            height: 400px;
+            background-color: blue;
+        }
+
+        &__img-container {
+            width: 30%; 
+            height: 400px;
+            background-color: rgb(33, 102, 52);
+        }
+
+        &__img-item-top {
+            width: 100%;
+            height: 200px;
+            background-color: cadetblue;
+        }
+
+        &__img-item-bottom {
+            width: 100%;
+            height: 200px;
+            background-color: chocolate;
+        }
+    }
 }
 
 #footer {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     display: flex;
     // background-color: #000;
     background-image: url('../assets/red-zeppelin-esOeipAebhw-unsplash.jpg');
@@ -48,8 +150,12 @@ body {
 
                 &-list {
                     margin-top: 10px;
-                    list-style-image: url('../assets/arrow.png');
+                    // list-style-image: url('../assets/about.jpeg');
                     list-style-type: none;
+
+                    ::marker {
+                        font-size: 1.5rem; /* You can use px, but I think rem is more respecful */
+                    }
                 }
 
                 &-link {
