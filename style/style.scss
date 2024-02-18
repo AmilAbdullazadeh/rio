@@ -41,6 +41,11 @@ body {
             border-radius: 12px;
             object-fit: cover;
 
+            animation-name: rotateElement;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 3s;
+            animation-iteration-count: 2;
            
         }
 
@@ -89,6 +94,15 @@ body {
                 position: absolute;
                 top: -3%;
                 left: 40%;
+                transition: all .3s ease-in-out;
+                // transition-duration: .9s;
+                // transition-timing-function: linear;
+                // transition-delay: 1s;
+                // transition-property: all;
+
+                &:hover {
+                    background-color: #fff;
+                }
             }
         }
 
@@ -153,8 +167,16 @@ body {
                     // list-style-image: url('../assets/about.jpeg');
                     list-style-type: none;
 
-                    ::marker {
+                    &:first-child {
+                         color: red;
+                    }
+
+                    &::marker {
                         font-size: 1.5rem; /* You can use px, but I think rem is more respecful */
+                    }
+                    &-item {
+
+                        
                     }
                 }
 
@@ -167,5 +189,28 @@ body {
             }
            
         }
+    }
+}
+
+
+li {
+
+    &:nth-child(2n + 1) {
+         a {
+            color: red;
+         }
+    }
+}
+
+@keyframes rotateElement {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        background-color: red;
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

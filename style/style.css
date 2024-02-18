@@ -34,6 +34,11 @@ body {
   border-radius: 12px;
   -o-object-fit: cover;
      object-fit: cover;
+  animation-name: rotateElement;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 3s;
+  animation-iteration-count: 2;
 }
 .card__body {
   display: flex;
@@ -65,6 +70,10 @@ body {
   position: absolute;
   top: -3%;
   left: 40%;
+  transition: all 0.3s ease-in-out;
+}
+#products .products__img1 .btn:hover {
+  background-color: #fff;
 }
 #products .products__img2 {
   width: 30%;
@@ -111,11 +120,31 @@ body {
   margin-top: 10px;
   list-style-type: none;
 }
-#footer .left .footer__nav-list ::marker {
+#footer .left .footer__nav-list:first-child {
+  color: red;
+}
+#footer .left .footer__nav-list::marker {
   font-size: 1.5rem; /* You can use px, but I think rem is more respecful */
 }
 #footer .left .footer__nav-link {
   text-decoration: none;
   color: #fff;
   opacity: 0.7;
+}
+
+li:nth-child(2n+1) a {
+  color: red;
+}
+
+@keyframes rotateElement {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    background-color: red;
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
