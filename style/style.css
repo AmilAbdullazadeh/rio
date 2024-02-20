@@ -11,7 +11,7 @@ body {
 }
 
 .card {
-  width: 100%;
+  width: 28%;
   padding: 20px 5px;
 }
 .card__top {
@@ -34,11 +34,6 @@ body {
   border-radius: 12px;
   -o-object-fit: cover;
      object-fit: cover;
-  animation-name: rotateElement;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 3s;
-  animation-iteration-count: 2;
 }
 .card__body {
   display: flex;
@@ -58,18 +53,18 @@ body {
   width: 40%;
   height: 400px;
   background-color: red;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #products .products__img1 .btn {
+  height: 50px;
   padding: 10px 30px;
   background-color: blue;
   border: none;
   border-radius: 14px;
   text-align: center;
   cursor: pointer;
-  position: absolute;
-  top: -3%;
-  left: 40%;
   transition: all 0.3s ease-in-out;
 }
 #products .products__img1 .btn:hover {
@@ -147,4 +142,15 @@ li:nth-child(2n+1) a {
   100% {
     transform: rotate(360deg);
   }
+}
+#cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  flex-wrap: wrap;
+}
+#cards .card_3 {
+  order: -1;
 }/*# sourceMappingURL=style.css.map */

@@ -17,9 +17,15 @@ body {
 }
 
 .card {
-    width: 100%;
+    width: 28%;
+    // margin-right: 50px;
     // min-height: 500px;
     // background-color: red;
+
+    // &:nth-child(3n) {
+    //     margin-right: 0;
+    // }
+
     padding: 20px 5px;
     &__top {
         width: 100%;
@@ -41,11 +47,11 @@ body {
             border-radius: 12px;
             object-fit: cover;
 
-            animation-name: rotateElement;
-            animation-duration: 3s;
-            animation-timing-function: ease-in-out;
-            animation-delay: 3s;
-            animation-iteration-count: 2;
+            // animation-name: rotateElement;
+            // animation-duration: 3s;
+            // animation-timing-function: ease-in-out;
+            // animation-delay: 3s;
+            // animation-iteration-count: 2;
            
         }
 
@@ -81,9 +87,14 @@ body {
             width: 40%; 
             height: 400px;
             background-color: red;
-            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .btn {
+
+                height: 50px;
                 // width: 100px;
                 padding: 10px 30px;
                 background-color: blue;
@@ -91,14 +102,9 @@ body {
                 border-radius: 14px;
                 text-align: center;
                 cursor: pointer;
-                position: absolute;
-                top: -3%;
-                left: 40%;
                 transition: all .3s ease-in-out;
-                // transition-duration: .9s;
-                // transition-timing-function: linear;
-                // transition-delay: 1s;
-                // transition-property: all;
+                
+                
 
                 &:hover {
                     background-color: #fff;
@@ -212,5 +218,19 @@ li {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+#cards {
+    display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+
+    .card_3 {
+        order: -1;
     }
 }
