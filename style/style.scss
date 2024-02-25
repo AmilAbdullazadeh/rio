@@ -234,3 +234,47 @@ li {
         order: -1;
     }
 }
+
+@media only screen and (max-width: 768px) { // mobile
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+
+        &__body-description {
+            font-size: 20px;
+        }
+    }
+
+    #products {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) { // tablet
+
+    .card {
+        width: 48%;
+        margin-bottom: 20px;
+
+        &__body-description {
+            font-size: 18px;
+        }
+    }
+
+}
+
+
+@media  only screen and (min-width: 993px) and (max-width: 1200px) { // desktop
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1401) { // lg
+    #footer {
+        flex-direction: row;
+    }
+}
