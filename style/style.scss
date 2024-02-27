@@ -4,6 +4,10 @@
 //     color: rgba(126, 13, 0, 0.051)
 // }
 
+@import "variables";
+@import "extends";
+@import "mixins";
+
 body {
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -86,30 +90,11 @@ body {
         &__img1 {
             width: 40%; 
             height: 400px;
-            background-color: red;
+            background-color: #432;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %d-flex-center;
 
-            .btn {
 
-                height: 50px;
-                // width: 100px;
-                padding: 10px 30px;
-                background-color: blue;
-                border: none;
-                border-radius: 14px;
-                text-align: center;
-                cursor: pointer;
-                transition: all .3s ease-in-out;
-                
-                
-
-                &:hover {
-                    background-color: #fff;
-                }
-            }
         }
 
         &__img2 {
@@ -133,21 +118,25 @@ body {
         &__img-item-bottom {
             width: 100%;
             height: 200px;
-            background-color: chocolate;
+            background-color: #432;
         }
     }
 }
 
 #footer {
+    display: none;
     width: 100%;
     min-height: 300px;
-    display: flex;
     // background-color: #000;
     background-image: url('../assets/red-zeppelin-esOeipAebhw-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px 30px;
+
+    @include tablet {
+        display: flex;
+    }
 
     .left {
 
@@ -163,9 +152,13 @@ body {
                 &-title {
                    text-transform: uppercase;
                      color: #fff;
-                     font-size: 20px;
+                     font-size: $font-size;
                      letter-spacing: 1px;
                     margin-bottom: 10px;
+
+                    @include tablet {
+                        font-size: 20px;
+                    }
                 }
 
                 &-list {
@@ -174,7 +167,7 @@ body {
                     list-style-type: none;
 
                     &:first-child {
-                         color: red;
+                         color: #432;
                     }
 
                     &::marker {
@@ -188,7 +181,7 @@ body {
 
                 &-link {
                     text-decoration: none;
-                    color: #fff;
+                    color: #432;
                     opacity: 0.7;
                 }
 
@@ -222,11 +215,8 @@ li {
 }
 
 #cards {
-    display: flex;
+    @extend %d-flex-center;
     // flex-direction: column;
-    // align-items: center;
-    justify-content: space-between;
-    align-items: center;
     column-gap: 20px;
     flex-wrap: wrap;
 
@@ -242,7 +232,7 @@ li {
         margin-bottom: 20px;
 
         &__body-description {
-            font-size: 20px;
+            font-size: $font-size;
         }
     }
 
@@ -258,7 +248,7 @@ li {
         margin-bottom: 20px;
 
         &__body-description {
-            font-size: 18px;
+            font-size: $font-size;
         }
     }
 
@@ -277,4 +267,8 @@ li {
     #footer {
         flex-direction: row;
     }
+}
+
+.btn {
+    @include btn-theme($main-color, $secondary-color);
 }

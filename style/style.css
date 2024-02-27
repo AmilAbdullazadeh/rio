@@ -1,4 +1,10 @@
 @charset "UTF-8";
+#cards, #products .products__img1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   width: 100%;
@@ -51,23 +57,7 @@ body {
 #products .products__img1 {
   width: 40%;
   height: 400px;
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#products .products__img1 .btn {
-  height: 50px;
-  padding: 10px 30px;
-  background-color: blue;
-  border: none;
-  border-radius: 14px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-#products .products__img1 .btn:hover {
-  background-color: #fff;
+  background-color: #432;
 }
 #products .products__img2 {
   width: 30%;
@@ -87,18 +77,23 @@ body {
 #products .products__img-item-bottom {
   width: 100%;
   height: 200px;
-  background-color: chocolate;
+  background-color: #432;
 }
 
 #footer {
+  display: none;
   width: 100%;
   min-height: 300px;
-  display: flex;
   background-image: url("../assets/red-zeppelin-esOeipAebhw-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px 30px;
+}
+@media (max-width: 991px) {
+  #footer {
+    display: flex;
+  }
 }
 #footer .left .footer__nav-item {
   margin-top: 7px;
@@ -110,19 +105,24 @@ body {
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
+@media (max-width: 991px) {
+  #footer .left .footer__nav-title {
+    font-size: 20px;
+  }
+}
 #footer .left .footer__nav-list {
   margin-top: 10px;
   list-style-type: none;
 }
 #footer .left .footer__nav-list:first-child {
-  color: red;
+  color: #432;
 }
 #footer .left .footer__nav-list::marker {
   font-size: 1.5rem; /* You can use px, but I think rem is more respecful */
 }
 #footer .left .footer__nav-link {
   text-decoration: none;
-  color: #fff;
+  color: #432;
   opacity: 0.7;
 }
 
@@ -143,9 +143,6 @@ li:nth-child(2n+1) a {
   }
 }
 #cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   column-gap: 20px;
   flex-wrap: wrap;
 }
@@ -171,7 +168,7 @@ li:nth-child(2n+1) a {
     margin-bottom: 20px;
   }
   .card__body-description {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -185,6 +182,21 @@ li:nth-child(2n+1) a {
   #footer {
     flex-direction: row;
   }
+}
+.btn {
+  height: 50px;
+  padding: 10px 30px;
+  background-color: #FC9849;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #FC9849;
 }
 
 /*# sourceMappingURL=style.css.map */
