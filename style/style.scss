@@ -270,5 +270,20 @@ li {
 }
 
 .btn {
-    @include btn-theme($main-color, $secondary-color);
+    //@include btn-theme($main-color, $secondary-color);
+}
+
+.dropdown-toggle {
+    background-color: $main-color;
+    color: $secondary-color;
+    border: none;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $main-color;
+    }
 }
