@@ -3,25 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--  bootstrap  -->
-    <link rel="stylesheet" href="./assets/ui-kits/bootstrap.min.css">
+    <link
+      href="./style/style.css"
+      rel="stylesheet"
+    />
     <!--  js file  -->
     <script defer src="./js/main.js" ></script>
     <title>JS Projects</title>
   </head>
-  <body class="containervh-100" id="main" >
+  <body >
 
-    <div class="row flex align-items-center justify-content-center vh-100">
-        <div id="card" class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Atalar sozu</h5>
-            <p id="card-text" class="card-text"></p>
-            <a id="btn" class="btn btn-primary">Generate new Atalar sozu</a>
-          </div>
-        </div>
-    </div>
+    <section class="modal hidden">
+      <div class="flex">
+        <img src="user.png" width="50px" height="50px" alt="user" />
+        <button class="btn-close">⨉</button>
+      </div>
+      <div>
+        <h3>Stay in touch</h3>
+        <p>
+          This is a dummy newsletter form so don't bother trying to test it. Not
+          that I expect you to, anyways. :)
+        </p>
+      </div>
 
-  <!-- bootstrap -->
-  <script src="./assets/ui-kits/jquery-3.5.1.min.js"></script>
+      <input type="email" id="email" placeholder="brendaneich@js.com" />
+      <button class="btn">Submit</button>
+    </section>
+
+    <div class="overlay hidden"></div>
+    <button class="btn btn-open">Open Modal</button>
+
   </body>
 </html>
