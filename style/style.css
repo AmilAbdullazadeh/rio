@@ -1,93 +1,143 @@
-.development_title {
-  text-align: center;
-  font-size: 15px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  margin-top: 50px;
-}
-.development_title h2 {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
 }
 
-.skills-bar-container {
-  position: relative;
-  margin: 0 auto;
-  width: 40%;
-  min-width: 350px;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  list-style: none;
-  margin-bottom: 25px;
-}
-.skills-bar-container li {
-  position: relative;
-  width: 100%;
-  padding: 2px 2px;
+body {
+  background-image: linear-gradient(0deg, #8A2BE2, #9370DB);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  margin: 0;
 }
 
-.progressbar-title {
-  color: #ff6347;
-}
-.progressbar-title h3 {
-  display: inline-block;
+/* styling the outer music container */
+.music-container {
+  background-color: #efefef;
+  box-shadow: inset -1px -1px 5px rgba(33, 33, 33, 0.5), inset 1px 1px 5px rgba(33, 33, 33, 0.5);
+  display: flex;
+  padding: 20px 30px;
   position: relative;
-  top: 17px;
-  color: #888;
+  margin: 100px 0;
+  z-index: 10;
 }
-.progressbar-title .percent {
+
+.img-container {
+  position: relative;
+  width: 110px;
+}
+
+/* styling the image to look like a disc by placing a small circle in it*/
+.img-container::after {
+  content: "";
+  background-color: #fff;
+  border-radius: 50%;
   position: absolute;
-  right: 2px;
-  top: 40px;
+  bottom: 100%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, 50%);
 }
 
-.bar-container {
-  background: #555;
-  position: relative;
-  width: 100%;
-  height: 10px;
-  display: block;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
+/* using animation to make the image rotate continiously when music is playing */
+.img-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 110px;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+
+/* making sure the image rotates only when the music is playing */
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+/* creating the animation keyframe and setting the image to rotate 360 degrees continiously */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* styling the navigation buttons */
+.action-btn {
+  border: 0;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.action-btn.action-btn-big {
+  font-size: 30px;
+  outline: none;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+/* styling the music-info div by placing it under the music container */
+.music-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+/* making the music info pop up when the music playing using the transform property*/
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+/* styling the song progress container */
+.progress-container {
+  background: #fff;
   border-radius: 5px;
-  margin-bottom: -15px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
 }
-.bar-container .progressbar {
-  position: absolute;
-  width: 0%;
+
+/* styling the actual progress bar and making it flow along with the song*/
+.progress {
+  background-color: #fe8daa;
+  border-radius: 5px;
   height: 100%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-  transition: all linear 0.35s;
-}
-
-.progresstomatoes {
-  background: #ff6347;
-}
-
-#progress-html {
-  animation-name: progress-html;
-  animation-delay: 0.7s;
-}
-
-#progress-css {
-  animation-name: progress-css;
-  animation-delay: 1.4s;
-}
-
-#progress-javascript {
-  animation-name: progress-javascript;
-  animation-delay: 2.1s;
-}
-
-#progress-react {
-  animation-name: progress-react;
-  animation-delay: 2.8s;
+  width: 0%;
+  transition: width 0.1s linear;
 }
 
 /*# sourceMappingURL=style.css.map */
