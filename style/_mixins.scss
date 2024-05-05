@@ -1,0 +1,48 @@
+@import 'variables';
+
+@mixin btn-theme($bg-color, $color) {
+    height: 50px;
+    padding: 10px 30px;
+    background-color: $bg-color;
+    color: $color;
+    border: none;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: $color;
+        color: $bg-color;
+    }
+}
+
+// responsive
+
+// extra small devices
+@mixin extra-small {
+    @media (max-width: #{$extra-small-devices}) {
+        @content;
+    }
+}
+
+// mobile devices
+@mixin mobile {
+    @media (max-width: #{$small-devices}) {
+        @content;
+    }
+}
+
+// tablet devices
+@mixin tablet {
+    @media (max-width: #{$medium-devices}) {
+        @content;
+    }
+}
+
+// desktop devices
+@mixin desktop {
+    @media (max-width: #{$large-devices}) {
+        @content;
+    }
+}
