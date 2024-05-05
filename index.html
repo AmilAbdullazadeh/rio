@@ -5,59 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/style.css" />
-    <title>Form Validation</title>
+    <title>Document</title>
 </head>
 <body>
+<!-- Result -->
+<section id="result">
+    <div id="score">
+        <span id="player1-score" class="points">0</span>
+        :
+        <span id="player2-score" class="points">0</span>
+    </div>
+    <p id="round-message">Choose your option</p>
+</section>
 
+<!-- Player 1 area -->
+<section id="player1" class="players">
+    <span class="name">Player1</span>
+    <div class="selected-option">
+        <span class="option" data-index="0"></span>
+    </div>
+    <div class="available-options">
+        <span class="option" data-index="0">
+          <img src="assets/lizard.png" alt="Lizard" title="Lizard" />
+        </span>
+        <span class="option" data-index="1">
+          <img src="assets/paper.png" alt="Paper" title="Paper" />
+        </span>
+        <span class="option" data-index="2">
+          <img src="assets/rock.png" alt="Rock" title="Rock" />
+        </span>
+        <span class="option" data-index="3">
+          <img src="assets/scissor.png" alt="Scissor" title="Scissor" />
+        </span>
+        <span class="option" data-index="4">
+          <img src="assets/spock.png" alt="Spock" title="Spock" />
+        </span>
+    </div>
+</section>
 
-<form
-    id="form"
-    name="myForm"
->
-    <table cellspacing="2" cellpadding="2" border="1">
-        <tr>
-            <td align="right">Fullname</td>
-            <td>
-                <input type="text" name="fullname"  id="fullname"/>
-                <span></span>
-            </td>
-        </tr>
+<!-- Player 2 area -->
+<section id="player2" class="players">
+    <span class="name">Bot</span>
+    <div class="selected-option">
+        <span class="option" data-index="0"> </span>
+    </div>
+    <div class="available-options">
+        <span class="option" data-index="0">
+          <img src="assets/lizard.png" alt="Lizard" title="Lizard" />
+        </span>
+        <span class="option" data-index="1">
+          <img src="assets/paper.png" alt="Paper" title="Paper" />
+        </span>
+        <span class="option" data-index="2">
+          <img src="assets/rock.png" alt="Rock" title="Rock" />
+        </span>
+        <span class="option" data-index="3">
+          <img src="assets/scissor.png" alt="Scissor" title="Scissor" />
+        </span>
+        <span class="option" data-index="4">
+          <img src="assets/spock.png" alt="Spock" title="Spock" />
+        </span>
+    </div>
+</section>
 
-        <tr>
-            <td align="right">Email</td>
-            <td>
-                <input type="text" name="email"  id="email"/>
-                <span></span>
-            </td>
-        </tr>
-
-        <tr>
-            <td align="right">Zip Code</td>
-            <td>
-                <input type="text" name="zip"  id="zip"/>
-                <span></span>
-            </td>
-        </tr>
-
-        <tr>
-            <td align="right">Country</td>
-            <td>
-                <select name="country" id="country">
-                    <option value="-1" selected>[choose yours]</option>
-                    <option value="usa">USA</option>
-                    <option value="uk">UK</option>
-                    <option value="india">INDIA</option>
-                </select>
-                <span></span>
-            </td>
-        </tr>
-
-        <tr>
-            <td align="right"></td>
-            <td><input type="submit" value="Submit" /></td>
-        </tr>
-    </table>
-</form>
+<!-- Reset button -->
+<span id="reset" class="reset"><span>Reset</span></span>
 
 <script src="./js/main.js"></script>
 </body>
