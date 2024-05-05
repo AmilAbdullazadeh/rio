@@ -128,15 +128,17 @@ function calculateScore(player1, player2) {
     if (player1 === player2) {
         showMessage('No winner 👻')
     } else if (rule[player].includes(bot)) {
+        addScore(player1Score)
         showMessage('Player is winner 🎉')
     } else {
+        addScore(player2Score)
         showMessage('Bot is winner 🥶')
     }
 }
 
 //! Change the score (addScore with player)
-function addScore() {
-
+function addScore(player) {
+    player.textContent = Number(player.textContent) + 1
 }
 
 //TODO:: *** confity, alert message, storage score, if the difference is 15 and biger, then reset game and new game start, if I want to add a third player option add it ***
